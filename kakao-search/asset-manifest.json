@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ezen-react/11-kakao-search/static/css/main.826bafbd.css",
+    "main.js": "/ezen-react/11-kakao-search/static/js/main.541aa20a.js",
+    "static/js/787.7a2114b7.chunk.js": "/ezen-react/11-kakao-search/static/js/787.7a2114b7.chunk.js",
+    "index.html": "/ezen-react/11-kakao-search/index.html",
+    "main.826bafbd.css.map": "/ezen-react/11-kakao-search/static/css/main.826bafbd.css.map",
+    "main.541aa20a.js.map": "/ezen-react/11-kakao-search/static/js/main.541aa20a.js.map",
+    "787.7a2114b7.chunk.js.map": "/ezen-react/11-kakao-search/static/js/787.7a2114b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.826bafbd.css",
+    "static/js/main.541aa20a.js"
+  ]
+}
