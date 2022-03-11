@@ -5,4 +5,4 @@ https://ysw7939.github.io/clone-coding/Brunch.co.kr/index.html
 스타벅스
 https://ysw7939.github.io/clone-coding/starbucks.co.kr/index.html
 마이푸드
-https://ysw7939.github.io/clone-coding/MY-Food/My-Food.html
+https://ysw7939.github.io/clone-coding/kakao-search
