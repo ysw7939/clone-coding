@@ -1,0 +1,19 @@
+/* 
+    @Filename : common.css
+    @Author : 김우영, 양수원
+    @Description : 스타벅스 클론코딩 css 입니다.
+ */
+/* 글씨 드래그를 막아주는 css */
+.no-drag {
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+}
+

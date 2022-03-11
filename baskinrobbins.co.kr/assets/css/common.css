@@ -1,0 +1,134 @@
+body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, table, td, textarea, th, ul, figure, figcaption {
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+    line-height: 1.5;
+    letter-spacing: -.05em;
+    font-size: 13px;
+}
+
+ul{
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+a {
+    color: #483834;
+    text-decoration: none;
+    cursor: pointer;
+}
+img {
+    border: 0;
+    vertical-align: top;
+}
+header .menu-area .inner:after,
+header .member ul:after,
+#gnb .gnb-wrap > ul:after {display:table; clear:both; content:"";}
+
+
+/* dislide */
+.dslide {
+    opacity: 1;
+    text-align: center;
+}
+
+.dslide a {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+.dslide a span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    border: 0;
+    height: 6px;
+    margin: -3px 0 0 -3px;
+    width: 6px;
+    background-color: #cdccd5;
+}
+#content .banner-slide .dslide a span.active, 
+#content .banner-slide .dslide a:hover span, 
+#content .banner-slide .dslide a:hover a.active span {
+    width: 13px;
+    height: 13px;
+    margin: -6px 0px 0px -6px;
+    background-color: #301d17;
+}
+
+.dslide a span.active, 
+.dslide a:hover span, 
+.dslide a:hover a.active span {
+    width: 9px;
+    height: 9px;
+    margin: -4px 0px 0px -4px;
+    background-color: #301d17;
+}
+/* dslide end */
+
+#content .br-menu .menu-list, 
+#content .store-delivery, 
+#content .snsbox, 
+#content .br-event {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+/* swipe */
+.swipe-wrap > div, 
+.swipe-wrap > ul, 
+.swipe-wrap > li {
+    float: left;
+    position: relative;
+}
+
+.swipe {
+    overflow: hidden;
+    position: relative;
+}
+
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+#content .br-menu .menu-list, 
+#content .store-delivery, 
+#content .snsbox, 
+#content .br-event {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#content .store-delivery .store, 
+#content .store-delivery .order {
+    float: left;
+    width: 50%;
+}
+
+footer .policy, 
+footer .brand-family .inner,
+footer .info {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+footer .info > div p, 
+footer .info > div address {
+    display: inline-block;
+    padding-bottom: 3px;
+}

@@ -1,0 +1,56 @@
+#footer-wrapper {
+    position: relative;
+    top: 15%;
+    left: 50%;
+    margin: 0 0 0 -480px;
+    width: 960px;
+    height: 250px;
+    color: white;
+}
+
+#footer-sector1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-info p, #footer-info img {
+    margin: 0 0 10px 0;
+}
+
+#footer-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+#footer-menu ul li {
+    padding-bottom: 20px;
+    font-family: "Noto Sans KR";
+    font-size: 13px;
+}
+
+#footer-corp {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+#footer-corp .text-by {
+    font-size: 13px;
+}
+
+#footer-platform img:nth-child(2) {
+    margin-left: 18px;
+}
+
+.footer-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 70%;
+}

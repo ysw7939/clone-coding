@@ -1,0 +1,35 @@
+#keyword-warapper{
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+}
+
+#keyword-grid-wrapper {
+    width: 968px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.keyword-grid-item {
+    border: 1px solid #eee;
+    width: 121px;
+    height: 121px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.keyword-grid-item:hover {
+    border: 1px solid #00C2BB;
+    color: #00C9C4;
+}
+
+.keyword-grid-item-text {
+    font-size: 14px;
+    font-family: "Noto Sans KR";
+    text-align: center;
+    line-height: 1.3;
+    cursor: pointer;
+}

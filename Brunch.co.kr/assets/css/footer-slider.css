@@ -1,0 +1,86 @@
+/* 오직 슬라이드 구현을 위한 css */
+
+li {
+    list-style-type: none;
+} /* 보여줄 구간의 높이와 넓이 설정 */
+#articles-wrapper {
+    width: 100%;
+    height: 1000px;
+    max-height: 1000px;
+    min-height: 520px;
+    position: relative;
+    margin: 50px auto;
+    
+    overflow: hidden; /*리스트 형식으로 이미지를 일렬로 정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은 hidden으로 숨겨줘야됨*/
+}
+.footer-slides {
+    margin-top: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 300px;
+    width: 1669px; /* 슬라이드할 사진과 마진 총 넓이 */
+    transition: left 0.5s ease-out; /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+} /* 첫 번째 슬라이드 가운데에 정렬하기위해 첫번째 슬라이드만 margin-left조정 */
+.footer-slides li:first-child {
+    margin-left: 0;
+} /* 슬라이드들 옆으로 정렬 */
+.slides li:not(:last-child) {
+    float: left;
+    margin-right: 0;
+}
+.footer-slides li {
+    float: left;
+    overflow: hidden;
+}
+.footer-controller span {
+    width: 65px;
+    height: 80px;
+    position: absolute;
+    background-color: rgb(180, 180, 180);
+    opacity: 0.5;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px 20px;
+    top: 50%;
+    font-size: 40px;
+    cursor: pointer;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.footer-prev {
+    left: 10px;
+}
+.footer-next {
+    right: 10px;
+}
+
+/* 이미지간 여백 제거 */
+.footer-slides li br {
+    content: "";
+    display: block;
+    margin-bottom: -4px;
+}
+    
+.footer-slides li img {
+    cursor: pointer;
+    border:0;
+    overflow: hidden;
+}
+
+.slide-book {
+    width: 420px;
+    height: 520px;
+}
+
+.article-box {
+    max-width: 240px;
+    height: 600px;
+    margin-right: 20px;
+}
+
+.article-box .content, .article-box .noto-sans {
+    line-height: 1.5;
+}

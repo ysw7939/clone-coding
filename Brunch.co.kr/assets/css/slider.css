@@ -1,0 +1,143 @@
+/* 오직 슬라이드 구현을 위한 css */
+
+li {
+    list-style-type: none;
+} /* 보여줄 구간의 높이와 넓이 설정 */
+#slide-wrapper {
+    width: 100%;
+    height: 520px;
+    max-height: 520px;
+    min-height: 520px;
+    position: relative;
+    margin: 50px auto;
+    overflow: hidden; /*리스트 형식으로 이미지를 일렬로 정렬할 것이기 때문에, 500px 밖으로 튀어 나간 이미지들은 hidden으로 숨겨줘야됨*/
+}
+.slides {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1669px; /* 슬라이드할 사진과 마진 총 넓이 */
+    transition: left 0.5s ease-out; /*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+} /* 첫 번째 슬라이드 가운데에 정렬하기위해 첫번째 슬라이드만 margin-left조정 */
+.slides li:first-child {
+    margin-left: 0;
+} /* 슬라이드들 옆으로 정렬 */
+.slides li:not(:last-child) {
+    float: left;
+    margin-right: 0;
+}
+.slides li {
+    float: left;
+    overflow: hidden;
+}
+.controller span {
+    width: 65px;
+    height: 80px;
+    position: absolute;
+    background-color: rgb(180, 180, 180);
+    opacity: 0.5;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px 20px;
+    top: 50%;
+    font-size: 40px;
+    cursor: pointer;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+/* 이미지간 여백 제거 */
+.slides li br {
+    content: "";
+    display: block;
+    margin-bottom: -4px;
+}
+    
+.slides li img {
+    cursor: pointer;
+    width:100%;
+    border:0;
+
+    overflow: hidden;
+
+    object-fit: cover;
+    /* 마우스가 이미지를 벗어났을 때도 자연스럽게 애니메이션이 줄어들도록 처리 */
+    transform:scale(1.0);
+    transition: transform .3s;
+
+    /* 이미지를 어둡게함 */
+    /* filter 보다 dimmed 처리하는것이 더 좋다고함 */
+    filter: brightness(50%); 
+}
+
+.slides li img:hover {
+    cursor: pointer;
+    transform:scale(1.1); /* 이미지 확대 */
+    transition: transform .3s; /* 애니메이션 재생 시간 설정 */
+    overflow: hidden;
+}
+
+.slide-book {
+    width: 420px;
+    height: 520px;
+}
+
+.row-3-img {
+    display: flex;
+    align-items: space-between;
+}
+
+.img-text {
+    text-align: center;
+    position: relative;
+}
+
+.img-text h1 {
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.img-text span {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+/* 하단 슬라이드 페이지 번호 */
+#slide-no {
+    font-family: "Noto Sans KR";
+    font-size: 11px;
+    font-weight: 700;
+    color: grey;
+    width: 960px;
+    margin: 22px auto 0;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -20px;
+}
+
+.slide-no-page {
+    padding: 0 5px 0 5px;
+    cursor: pointer;
+}
+
+/* 활성화된 슬라이드 페이지에 밑줄 효과를 주기 위함 */
+.active-page {
+    text-decoration: underline solid 2px;
+    color: #000;
+}
