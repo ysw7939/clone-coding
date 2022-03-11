@@ -1,0 +1,173 @@
+/**
+ * @filename    : style.css
+ * @author      : 한송희 (onee.ssong@gmail.com), 정민아 (alsdk5069@gmail.com), 양수원 (ysw7939@gmail.com)
+ * @description : 회원가입 페이지의 스타일 적용 코드 모음
+ */
+
+@charset "utf-8";
+
+/** 기본 설정
+--------------------------------------- */
+html, body {
+    width: 100%; height: 100%; padding: 0; margin: 0;
+    
+}
+
+/** float 처리
+--------------------------------------- */
+.pull-left {float: left;}
+.pull-right {float: right;}
+.clearfix::after {content: ''; display: block; clear: both; float: none;}
+
+/** ALL */
+.group {
+    overflow: hidden;
+    width: 100%;
+}
+
+.join_title {
+    margin: 19px 0 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#container {
+    min-width: 220px;
+    margin: 0 15px;
+}
+
+.content {
+    max-width: 800px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.input {
+    display: inline-block;
+    position: relative;
+    width: 80%;
+    height: 30px;
+    border: 1px solid #dadada;
+    background: white;
+
+    padding: 10px 14px;
+    box-sizing: border-box;
+}
+
+.int {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    border: none;
+    vertical-align: top;
+    margin-top: -5px;
+}
+
+.int:focus {
+    outline: none;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: block;
+    margin: 0 auto;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+}
+
+tr {
+    border-bottom: 1px solid #bbb;
+}
+
+th {
+    width: 120px;
+    padding: 10px;
+    text-align: left;
+    background: #eee;
+}
+
+td {
+    
+    padding: 15px 0 15px 15px;
+}
+
+
+/** HEADER
+--------------------------------------- */
+h2 {
+    text-align: center;
+}
+
+
+/** FORM
+--------------------------------------- */
+/* 주소 */
+.address_input {
+    margin-bottom: 5px;
+}
+
+.postcode_input {
+    width: 30%;
+}
+
+#add_btn {
+    display: inline-block;
+    width: 19%;
+    height: 30px;
+    border: 1px solid #dadada;
+    vertical-align: top;
+}
+
+.addressde_input {
+    width: 50%;
+}
+
+/* 가입 버튼 */
+#btnJoin {
+    display: inline-block;
+    width : 360px;
+    height: 40px;
+    border: 1px solid #dadada;
+    margin: 40px 28%;
+}
+
+/* 우편번호 iframe 창 */
+
+/* form 위의 ifram 창 */
+#window {
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-overflow-scrolling: touch;
+}
+
+#closeBtn {
+    cursor: pointer;
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    z-index: 1;
+}
+
+/* 끼워넣는 ifram 창 */
+#postcodeWrap {
+    display: none;
+    border: 1px solid;
+    width: 500px;
+    height: 300px;
+    margin: 5px 0;
+    position: relative;
+}
+
+#closedBtn {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: -1px;
+    z-index: 1;
+}

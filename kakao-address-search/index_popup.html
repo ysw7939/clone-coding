@@ -1,0 +1,163 @@
+<!--
+ @filename    : index.html
+ @author      : 한송희 (onee.ssong@gmail.com), 정민아 (alsdk5069@gmail.com), 양수원 (ysw7939@gmail.com)
+ @description : 회원가입 페이지의 구조 구현
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5807/5807672.png">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <!------ HEADER ------>
+        <div id="header">
+            <div class="logo">
+                <h2>Join Page</h2>
+            </div>
+        </div>
+
+        <!------ CONTAINER ------>
+        <form id="join_form">
+            <div id="container">
+                <div class="content">
+                    <table>
+                        <tbody>
+                            <!-- 아이디 -->
+                            <tr>
+                                <th>
+                                    <span class="join_title">아이디</span>
+                                </th>
+                                <td>
+                                    <span class="input id_input">
+                                        <input type="text" id="id" class="int" title="Id" />
+                                    </span>
+                                </td>
+                            </tr>
+    
+                            <!-- 비밀번호 -->
+                            <tr>
+                                <th>
+                                    <span class="join_title">비밀번호</span>
+                                </th>
+                                <td>
+                                    <span class="input pw_input">
+                                        <input type="password" id="pw" class="int" title="PassWord" />
+                                    </span>
+                                </td>
+                            </tr>
+    
+                            <!-- 비밀번호 확인 -->
+                            <tr>
+                                <th>
+                                    <span class="join_title">비밀번호 확인</span>
+                                </th>
+                                <td>
+                                    <span class="input pw_input_re">
+                                        <input type="password" id="pw_re" class="int" title="PassWord" />
+                                    </span>
+                                </td>
+                            </tr>
+    
+                            <!-- 이름 -->
+                            <tr>
+                                <th>
+                                    <span class="join_title">이름</span>
+                                </th>
+                                <td>
+                                    <span class="input name_input">
+                                        <input type="text" id="name" class="int" title="Name" />
+                                    </span>
+                                </td>
+                            </tr>
+    
+                            <!-- 이메일 -->
+                            <tr>
+                                <th>
+                                    <span class="join_title">이메일</span>
+                                </th>
+                                <td>
+                                    <span class="input email_input">
+                                        <input type="email" id="email" class="int" title="Email" />
+                                    </span>
+                                </td>
+                            </tr>
+    
+                            <!-- 휴대폰 번호 -->
+                            <tr>
+                                <th>
+                                    <span class="join_title">휴대폰 번호</span>
+                                </th>
+                                <td>
+                                    <span class="input phone_input">
+                                        <input type="tel" id="tel" class="int" title="MOBILE" />
+                                    </span>
+                                </td>
+                            </tr>
+    
+                            <!-- 주소 -->
+                            <tr>
+                                <th>
+                                    <span class="join_title">주소</span>
+                                </th>
+                                <td>
+                                    <div class="info_input post">
+                                        <span class="input postcode_input">
+                                            <input type="text" id="postcode" class="int" title="POSTCODE" placeholder="우편번호" readonly/>
+                                        </span>
+                                        <button type="button" id="add_btn">우편번호 찾기</button>
+                                        <span class="input address_input">
+                                            <input type="text" id="address" class="int" title="ADDRESS" placeholder="주소" readonly/>
+                                        </span>
+                                        <span class="input addressde_input">
+                                            <input type="text" id="address_detail" class="int" title="ADDRESSDETAIL" placeholder="상세주소"/>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                    <!-- 제출 버튼 -->
+                    <div class="group">
+                        <div class="join_group">
+                            <div class="join_btn">
+                                <button type="submit" id="btnJoin" class="btn_type btn_primary">
+                                    <span>가입하기</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/available_test.js"></script>
+    <script src="js/regex_helper.js"></script>
+    
+    <!-- 통합 로딩 방식 : postcode.v2.js 라는 이름의 파일 로딩을 통해 우편번호 서비스를 이용 가능 -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+    window.onload = function(){
+        document.getElementById("add_btn").addEventListener("click", function(){ //우편번호 버튼 클릭 시
+            //카카오 지도 발생
+            new daum.Postcode({
+                oncomplete: function(data) { //선택시 입력값 세팅
+                    document.getElementById("postcode").value = data.zonecode;  // 우편번호 넣기
+                    document.getElementById("address").value = data.address;    // 주소 넣기
+                    document.getElementById("address_detail").focus();          // 상세주소 포커싱
+                }
+            }).open();
+        });
+    }
+    </script>
+</body>
+</html>
